@@ -1,24 +1,64 @@
 <div class="h-screen overflow-hidden grid" id="app">
-  <div class="p-3 border-b border-gray-700 grid" id="toolbar">
-    <h1 class="font-bold">Symphony</h1>
-  </div>
+  <app-navbar></app-navbar>
+  <main>
+    <div class="grid" id="main">
+      <div class="w-64 border-r border-gray-700 grid grid-cols-1 bg-black" id="sidebar">
+        <div class="">
+          <h4 class="text-xs font-bold text-gray-600 px-4 pb-2 pt-4">Compute</h4>
+          <div class="h-12 flex items-center px-4 cursor-pointer hover:bg-gray-900 text-gray-300">
+            <div id="icon" class="mr-6">
+              <i data-feather="monitor" style="width: 21px"></i>
+            </div>
+            <div id="label">
+              VM Instances
+            </div>
+          </div>
+          <div class="h-12 flex items-center px-4 cursor-pointer hover:bg-gray-900 text-gray-300">
+            <div id="icon" class="mr-6">
+              <i data-feather="disc" style="width: 21px"></i>
+            </div>
+            <div id="label">
+              OS Images
+            </div>
+          </div>
 
-  <div class="grid" id="main">
-    <div class="w-64 border-r border-gray-700 grid grid-cols-1" id="sidebar">
-      <div class="p-4">
-        <div class="p-2 cursor-pointer hover:bg-gray-100 hover:text-gray-900 rounded">Images</div>
-        <div class="p-2 cursor-pointer hover:bg-gray-100 hover:text-gray-900 rounded">Instances</div>
-        <div class="p-2 cursor-pointer hover:bg-gray-100 hover:text-gray-900 rounded">Networks</div>
-        <div class="p-2 cursor-pointer hover:bg-gray-100 hover:text-gray-900 rounded">Volumes</div>
+          <h4 class="text-xs font-bold text-gray-600 px-4 pb-2 pt-4">Networking</h4>
+          <div class="h-12 flex items-center px-4 cursor-pointer hover:bg-gray-900 text-gray-300">
+            <div id="icon" class="mr-6">
+              <i data-feather="zap" style="width: 21px"></i>
+            </div>
+            <div id="label">
+              VPC
+            </div>
+          </div>
+
+          <h4 class="text-xs font-bold text-gray-600 px-4 pb-2 pt-4">Storage</h4>
+          <div class="h-12 flex items-center px-4 cursor-pointer hover:bg-gray-900 text-gray-300">
+            <div id="icon" class="mr-6">
+              <i data-feather="hard-drive" style="width: 21px"></i>
+            </div>
+            <div id="label">
+              Volumes
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overflow-x-hidden overflow-y-auto" id="content">
+        <div class="flex flex-col h-full p-4">
+          <div class="bg-gray-700 border border-black rounded shadow-lg p-4">
+            <div class="title mb-4">
+              <h3 class="text-xl font-bold mb-0">Welcome to Symphony.</h3>
+              <h4>The Open Source Cloud.</h4>
+            </div>
+            <div class="content text-sm">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lobortis lacinia ligula, a volutpat ligula dignissim ac. Cras ac augue nec nunc volutpat luctus. Praesent quis interdum ipsum, non venenatis quam. Duis euismod neque vitae ante dapibus, eu aliquam lacus sodales. Quisque semper leo non augue molestie, nec posuere dui ornare. Fusce eleifend non erat quis efficitur. Aliquam hendrerit gravida consectetur. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Proin metus ante, pretium quis sapien sit amet, fermentum rhoncus justo. Quisque vel massa at sem luctus mollis. Aliquam vel velit laoreet, vulputate ipsum a, vestibulum libero.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="overflow-x-hidden overflow-y-auto" id="content">
-      <div class="flex flex-col h-full">
-        <p>Whats up chat?</p>
-      </div>
-    </div>
-  </div>
+  </main>
 </div>
 
 <router-outlet></router-outlet>

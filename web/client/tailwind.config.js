@@ -13,5 +13,7 @@ module.exports = {
   theme: {
     extend: {},
   },
-  variants: {},
+  variants: {
+    height: ['responsive', 'focus']
+  },
 };
